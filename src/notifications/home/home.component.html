@@ -1,0 +1,17 @@
+﻿<h1>Your Matcha Notifications</h1>
+<button class="btn btn-success m-1" (click)="alertService.likes('Someone has liked your profile!!', options)">Likes</button>
+<button class="btn btn-danger m-1" (click)="alertService.dislikes('Someone has disliked your profile :(', options)">Dislikes</button>
+<button class="btn btn-info m-1" (click)="alertService.visits('Someone has visited your profile', options)">Visits</button>
+<button class="btn btn-warning m-1" (click)="alertService.messages('Someone has messaged you.', options)">Messages</button>
+<button class="btn btn-primary m-1" (click)="alertService.matches('Someone has matched your profile.', options)">Matches</button>
+<button class="btn btn-light m-1" (click)="alertService.clear()">Clear</button>
+<div class="form-group mt-2">
+    <div class="form-check">
+        <input type="checkbox" name="autoClose" id="autoClose" class="form-check-input" [(ngModel)]="options.autoClose">
+        <label for="autoClose">Auto close alert after three seconds</label>
+    </div>
+    <div class="form-check">
+        <input type="checkbox" name="keepAfterRouteChange" id="keepAfterRouteChange" class="form-check-input" [(ngModel)]="options.keepAfterRouteChange">
+        <label for="keepAfterRouteChange">Keep displaying after one route change</label>
+    </div>
+</div>
